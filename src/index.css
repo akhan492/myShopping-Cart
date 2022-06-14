@@ -24,7 +24,8 @@ h6 {
 }
 .col-1 {
   flex: 1;
-  height: calc(300px + 1.5vh);
+  height: 100%;
+  min-height: 250px;
 }
 .col-2 {
   flex: 2;
