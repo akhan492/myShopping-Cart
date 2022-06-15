@@ -19,7 +19,7 @@ function Cart({ cartItems, onAdd, onRemove }) {
               </button>
             </div>
             <div>
-              {item.quantity}X ${item.price}
+              {item.quantity}X ₹{item.price}
             </div>
           </div>
         ))}
