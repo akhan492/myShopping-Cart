@@ -94,3 +94,13 @@ button:hover{
   border: 0.1rem solid #e0e0e0;
   cursor: pointer;
 }
+
+  @media screen and (max-width: 600px) {
+    .cart-button{
+      display: grid;
+      grid-template-columns:1fr 1fr;
+      grid-gap: 0.5rem;
+    }
+  }
+    
+  

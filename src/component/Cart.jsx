@@ -10,7 +10,7 @@ function Cart({ cartItems, onAdd, onRemove }) {
         cartItems.map((item) => (
           <div className="row" key={item.id}>
             <div className="col-2">{item.name}</div>
-            <div className="col-2">
+            <div className="cart-button col-2">
               <button className="add" onClick={() => onAdd(item)}>
                 +
               </button>
