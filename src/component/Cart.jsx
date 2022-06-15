@@ -3,7 +3,7 @@ function Cart({ cartItems, onAdd, onRemove }) {
   // const itemTotal = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <aside className="block col-1">
+    <aside className="cart block col-1">
       <h2 style={{ color: "purple" }}>Cart Items</h2>
       <div>{cartItems.length === 0 && <p>No items in cart</p>}</div>
       {cartItems &&
@@ -19,7 +19,7 @@ function Cart({ cartItems, onAdd, onRemove }) {
               </button>
             </div>
             <div>
-              {item.quantity}X ₹{item.price}
+              <p>{item.quantity}X ₹{item.price}</p>
             </div>
           </div>
         ))}
