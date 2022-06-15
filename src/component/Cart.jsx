@@ -27,7 +27,7 @@ function Cart({ cartItems, onAdd, onRemove }) {
       </div>
          
        {cartItems.length>0 && (<><hr /><strong>
-        Total: $
+        Total: ₹
           {cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)}
         </strong></>) }
     </aside>
