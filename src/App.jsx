@@ -7,6 +7,7 @@ import data from "./data.json";
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
+
   const onAdd = (data) => {
     const exist = cartItems.find((item) => item.id === data.id);
     if (exist) {
@@ -35,13 +36,16 @@ export default function App() {
       );
     }
   };
+  const onClear = () => {
+    setCartItems([]);
+  }
   return (
     <>
       <div className="App">
         <Header />
         <div className="row">
           <Main onAdd={onAdd} products={data} />
-          <Cart onAdd={onAdd} cartItems={cartItems} onRemove={onRemove} />
+          <Cart onAdd={onAdd} cartItems={cartItems} onRemove={onRemove} onClear={onClear} />
         </div>
       </div>
     </>

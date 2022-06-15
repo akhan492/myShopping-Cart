@@ -1,5 +1,5 @@
 import React from "react";
-function Cart({ cartItems, onAdd, onRemove }) {
+function Cart({ cartItems, onAdd, onRemove, onClear }) {
   // const itemTotal = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
@@ -27,6 +27,7 @@ function Cart({ cartItems, onAdd, onRemove }) {
       </div>
          
        {cartItems.length>0 && (<><hr /><strong>
+        <button className="clear" onClick={()=>onClear()}> Clear Cart </button>
         Total: ₹
           {cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)}
         </strong></>) }
